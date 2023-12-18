@@ -2,20 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS } from "../constants/Color";
-import { useFonts } from "expo-font";
 
 const HomeScreen = () => {
-
-    const [fontsLoaded] = useFonts({
-        "Roboto-Bold": require("../assets/fonts/Roboto-Bold.ttf"),
-        "Roboto-Light": require("../assets/fonts/Roboto-Light.ttf"),
-        "Roboto-Medium": require("../assets/fonts/Roboto-Medium.ttf"),
-        "Roboto-Regular": require("../assets/fonts/Roboto-Regular.ttf")
-    });
-    
-    if(!fontsLoaded) {
-        return null;
-    }
 
     const navigation = useNavigation();
 
@@ -26,7 +14,7 @@ const HomeScreen = () => {
                 fontSize: 30,
                 textAlign: "center",
                 marginTop: "20%",
-                fontFamily: "Roboto-Light"
+                fontFamily: "OpenSans-Bold"
             }}
             >Home Screen</Text>
             <TouchableOpacity
@@ -45,7 +33,7 @@ const HomeScreen = () => {
                     fontSize: 15,
                     textAlign: "center",
                     color: COLORS.white,
-                    fontFamily: "Roboto-Light"
+                    fontFamily: "OpenSans-Regular"
                 }}
             >Ir a Stack Screen</Text>
             </TouchableOpacity>

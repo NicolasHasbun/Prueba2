@@ -8,7 +8,8 @@ const StackScreen = () => {
             style={{
                 fontSize: 30,
                 textAlign: "center",
-                marginTop: "20%"
+                marginTop: "20%",
+                fontFamily: "OpenSans-Bold"
             }}
             >Stack Screen</Text>
         </View>

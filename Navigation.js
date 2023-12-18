@@ -14,63 +14,59 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 const HomeStackNavigator = createNativeStackNavigator();
 
 
-function MyStack(){
-    return(
-        <HomeStackNavigator.Navigator
-            initialRouteName="HomeScreen"
-            >
-            <HomeStackNavigator.Screen
-                name="HomeScreen"
-                component={HomeScreen}
-            />
-            <HomeStackNavigator.Screen
-                name="Stack"
-                component={StackScreen}
-                options={{
-                    // headerShown: true,
-                    // headerBackTitleVisible: false
-                }}
-            />
-        </HomeStackNavigator.Navigator>
-    )
-}
+const MyStack = () => {
+    return (
+      <HomeStackNavigator.Navigator initialRouteName="HomeScreen">
+        <HomeStackNavigator.Screen name="HomeScreen" component={HomeScreen} />
+        <HomeStackNavigator.Screen
+          name="Stack"
+          component={StackScreen}
+          options={{
+            // headerShown: true,
+            // headerBackTitleVisible: false
+          }}
+        />
+      </HomeStackNavigator.Navigator>
+    );
+  };
 
 
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
+const MyTabs = () => {
     return (
-        <Tab.Navigator
-            initialRouteName="Home"
-            screenOptions={{
-                tabBarActiveTintColor: COLORS.primary,
-            }}
-            >
-            <Tab.Screen 
-                name="Home" 
-                component={MyStack} 
-                options={{
-                    tabBarLabel: 'Home',
-                    tabBarIcon:({ color, size}) => {
-                       return <MaterialCommunityIcons name="home" color={color} size={30} />
-                    },
-                    tabBarBadge: 10,
-                    headerShown: false,
-                }}
-            />
-            <Tab.Screen 
-                name="Settings" 
-                component={SettingsScreen}
-                options={{
-                    tabBarLabel: 'Settings',
-                    tabBarIcon:({ color, size}) => {
-                       return <MaterialCommunityIcons name="brightness-5" color={color} size={30} />
-                    },
-                }}
-            />
-        </Tab.Navigator>
+      <Tab.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          tabBarActiveTintColor: COLORS.primary,
+        }}
+      >
+        <Tab.Screen
+          name="Home"
+          component={MyStack}
+          options={{
+            tabBarLabel: 'Home',
+            tabBarIcon: ({ color, size }) => {
+              return <MaterialCommunityIcons name="home" color={color} size={30} />;
+            },
+            tabBarBadge: 10,
+            headerShown: false,
+          }}
+        />
+        <Tab.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{
+            tabBarLabel: 'Settings',
+            tabBarIcon: ({ color, size }) => {
+              return <MaterialCommunityIcons name="brightness-5" color={color} size={30} />;
+            },
+          }}
+        />
+      </Tab.Navigator>
     );
-}
+  };
+
 
 
 export default function Navigation() {
