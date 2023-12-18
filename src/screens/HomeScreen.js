@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS } from "../constants/Color";
+import Header from "../constants/Header";
 
 const HomeScreen = () => {
 
@@ -14,7 +15,7 @@ const HomeScreen = () => {
                 fontSize: 30,
                 textAlign: "center",
                 marginTop: "20%",
-                fontFamily: "OpenSans-Bold"
+                fontFamily: "OpenSans-Medium"
             }}
             >Home Screen</Text>
             <TouchableOpacity

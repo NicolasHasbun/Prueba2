@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import Header from "../constants/Header";
 
-const SettingsScreen = () => {
+const StackScreen = () => {
     return (
         <View>
         <Text
@@ -9,11 +10,11 @@ const SettingsScreen = () => {
                 fontSize: 30,
                 textAlign: "center",
                 marginTop: "20%",
-                fontFamily: "OpenSans-Bold"
+                fontFamily: "OpenSans-Medium"
             }}
-            >Settings Screen</Text>
+            >Stack Screen</Text>
         </View>
     );
 }
 
-export default SettingsScreen;
+export default StackScreen;

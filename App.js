@@ -1,7 +1,7 @@
 import React from "react";
 import { useFonts } from '@expo-google-fonts/open-sans';
 import { AppLoading } from 'expo';
-import Navigation from "./Navigation";
+import Navigation from "./src/navigation/Navigation";
 
 export default function App () {
   let [fontsLoaded] = useFonts({
